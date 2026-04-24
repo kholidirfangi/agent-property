@@ -125,7 +125,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 text-center">
             <a className="px-6 py-4 bg-[#C9A84C] text-white text-sm font-bold uppercase rounded-sm">
               Lihat Listing
             </a>
