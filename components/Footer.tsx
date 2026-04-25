@@ -119,45 +119,45 @@ function ColHeading({ children }: { children: React.ReactNode }) {
 }
 
 // ─── Newsletter form ──────────────────────────────────────
-function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState(false);
+// function NewsletterForm() {
+//   const [email, setEmail] = useState("");
+//   const [sent, setSent] = useState(false);
 
-  const handleSubmit = () => {
-    if (!email || !email.includes("@")) return;
-    setSent(true);
-    setEmail("");
-    setTimeout(() => setSent(false), 4000);
-  };
+//   const handleSubmit = () => {
+//     if (!email || !email.includes("@")) return;
+//     setSent(true);
+//     setEmail("");
+//     setTimeout(() => setSent(false), 4000);
+//   };
 
-  return (
-    <div className="flex flex-col sm:flex-row gap-2 mt-3">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-        placeholder="email@anda.com"
-        className="flex-1 px-4 py-2.5 text-[13px] rounded-sm bg-white/10 border border-white/15 text-white placeholder-white/30 focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
-        style={{ fontFamily: "'Inter', sans-serif" }}
-        disabled={sent}
-      />
-      <motion.button
-        whileHover={{ scale: 1.04 }}
-        whileTap={{ scale: 0.96 }}
-        onClick={handleSubmit}
-        className="px-5 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase rounded-sm whitespace-nowrap transition-colors duration-200"
-        style={{
-          backgroundColor: sent ? "#25D366" : "#C9A84C",
-          color: "#fff",
-          fontFamily: "'Inter', sans-serif",
-        }}
-      >
-        {sent ? "✓ Terkirim" : "Daftar"}
-      </motion.button>
-    </div>
-  );
-}
+//   return (
+//     <div className="flex flex-col sm:flex-row gap-2 mt-3">
+//       <input
+//         type="email"
+//         value={email}
+//         onChange={(e) => setEmail(e.target.value)}
+//         onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+//         placeholder="email@anda.com"
+//         className="flex-1 px-4 py-2.5 text-[13px] rounded-sm bg-white/10 border border-white/15 text-white placeholder-white/30 focus:outline-none focus:border-[#C9A84C] transition-colors duration-200"
+//         style={{ fontFamily: "'Inter', sans-serif" }}
+//         disabled={sent}
+//       />
+//       <motion.button
+//         whileHover={{ scale: 1.04 }}
+//         whileTap={{ scale: 0.96 }}
+//         onClick={handleSubmit}
+//         className="px-5 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase rounded-sm whitespace-nowrap transition-colors duration-200"
+//         style={{
+//           backgroundColor: sent ? "#25D366" : "#C9A84C",
+//           color: "#fff",
+//           fontFamily: "'Inter', sans-serif",
+//         }}
+//       >
+//         {sent ? "✓ Terkirim" : "Daftar"}
+//       </motion.button>
+//     </div>
+//   );
+// }
 
 // ─── Scroll to top button ─────────────────────────────────
 function ScrollTopButton() {
@@ -200,7 +200,7 @@ export default function Footer() {
     >
       {/* ── Decorative top gold line ── */}
       <div
-        className="h-[2px] w-full"
+        className="h-0.5 w-full"
         style={{
           background: "linear-gradient(90deg, transparent 0%, #C9A84C 30%, #C9A84C 70%, transparent 100%)",
         }}
@@ -259,7 +259,7 @@ export default function Footer() {
                 Konsultasikan kebutuhan Anda secara gratis hari ini.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.04, y: -2 }}
@@ -341,7 +341,7 @@ export default function Footer() {
                   style={{ color: "rgba(255,255,255,0.45)", fontFamily: "'Inter', sans-serif" }}
                 >
                   <span
-                    className="mt-0.5 flex-shrink-0 transition-colors duration-200 group-hover:text-[#C9A84C]"
+                    className="mt-0.5 shrink-0 transition-colors duration-200 group-hover:text-[#C9A84C]"
                     style={{ color: "#C9A84C" }}
                   >
                     {c.icon}

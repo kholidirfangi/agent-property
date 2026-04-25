@@ -44,12 +44,12 @@ export default function AboutAgent() {
             className="relative"
           >
             <div className="overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=85&auto=format&fit=crop"
                 alt="Budi Santoso - Agen Properti"
                 width={800}
                 height={1000}
-                className="w-full h-[420px] sm:h-[520px] object-cover"
+                className="w-full h-105 sm:h-130 object-cover"
               />
             </div>
 

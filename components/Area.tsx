@@ -109,16 +109,16 @@ export default function AreaCoverageSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative w-full h-[360px] sm:h-[420px] rounded-sm overflow-hidden">
+            <div className="relative w-full h-90 sm:h-105 rounded-sm overflow-hidden">
               {/* IMAGE */}
-              <img
+              <Image width={1000} height={1000}
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
                 alt="Area Properti Premium"
                 className="object-cover"
               />
 
               {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-[#0A1F44]/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0A1F44]/80 via-[#0A1F44]/40 to-transparent" />
 
               {/* BORDER */}
               <div className="absolute inset-0 border border-white/10 rounded-sm" />

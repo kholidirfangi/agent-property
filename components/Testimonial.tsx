@@ -109,7 +109,7 @@ export default function TestimonialSection() {
               style={{ backgroundColor: "#FFFFFF" }}
             >
               {/* Hover effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-br from-[#C9A84C]/10 to-transparent" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-linear-to-br from-[#C9A84C]/10 to-transparent" />
 
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -128,7 +128,7 @@ export default function TestimonialSection() {
 
               {/* User */}
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
                   width={40}
